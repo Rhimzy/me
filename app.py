@@ -74,4 +74,4 @@ def index():
     return render_template('meme_index.html', meme_pic=meme_pic)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8080)
