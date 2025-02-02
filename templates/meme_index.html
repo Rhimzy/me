@@ -5,30 +5,64 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Rhimzy's Meme Site</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <!-- Link to the external font -->
+    <link href="https://fonts.cdnfonts.com/css/abc-ginto-nord-unlicensed-trial" rel="stylesheet">
+
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
     <style>
+        /* Apply the custom font to the body */
         body {
             background-color: #000000;
             text-align: center; /* Centers all content */
             color: white; /* Makes text visible on black background */
-            font-family: Arial, sans-serif;
+            font-family: 'ABC Ginto Nord', Arial, sans-serif; /* Use the custom font */
+            margin: 0;
+            padding: 0;
         }
+
         h1 {
             font-size: 2rem;
             margin-top: 20px;
         }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Prevent overflow */
+        }
+
         img {
             max-width: 90%;
-            max-height: 90%;/* Ensures the image does not exceed screen width */
+            max-height: 90%; /* Ensures the image does not exceed screen width/height */
             height: auto; /* Maintains aspect ratio */
             border-radius: 10px; /* Optional: Rounded corners */
             margin-top: 10px;
+            object-fit: contain; /* Ensures the image fits inside the container */
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem; /* Adjust font size on smaller screens */
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 80%; /* Slightly smaller height on mobile */
+            }
         }
     </style>
 </head>
 <body>
     <h1>Memez</h1>
-    <p><img src="{{ meme_pic }}" alt="Random Meme"></p>
+    <div class="container">
+        <p><img src="{{ meme_pic }}" alt="Random Meme"></p>
+    </div>
 </body>
 </html>
