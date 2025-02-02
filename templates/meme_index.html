@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Rhimzy's Meme Site</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body {
+            background-color: #000000;
+            text-align: center; /* Centers all content */
+            color: white; /* Makes text visible on black background */
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 90%; /* Ensures the image does not exceed screen width */
+            height: auto; /* Maintains aspect ratio */
+            border-radius: 10px; /* Optional: Rounded corners */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Memez</h1>
+    <p><img src="{{ meme_pic }}" alt="Random Meme"></p>
+</body>
+</html>
